@@ -8,6 +8,10 @@ uv add matplotlib toml
 uv run src/main.py data/[toml file]
 ```
 
+### Notes
+- Depending on the data source you may can set `transpose` to true for convenience (in `/data/[toml file]`), which transposes `dataset`
+- Changint `y_ticks` does affect how "stretched" the bars are, you may want to include a lower tick to better distinguish low-value perf benchs, while leaving their corresponding `y_tickslabels` empty to reduce crowding
+
 <table>
   <tr>
     <td><img src="plots/circom.android.proof.gen.png" width="400"><br>Circom Android Proof Generation</td>
