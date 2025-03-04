@@ -1,0 +1,29 @@
+
+
+[metadata]
+title = "Circom Witness Generation on macOS"
+x_label = "\nWitness generator"
+y_label = "Time, log scale\n"
+# transpose rows x columns
+transpose = true
+log_scale = true
+
+[data]
+dataset=[
+[63.90, 69.60, 507.70, 214.60, 348.70],
+[22.00, 32.00, 272.00, 112.00, 225.00],
+[164.00, 0.00, 5326.00, 4796.00, 4777.00],
+[7.10, 5.00, 287.00, 34.90, 130.00],
+[324.00, 0.00, 5369.00, 2902.00, 3437.00]]
+
+[labels]
+# rows = bars = benchs
+rows = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
+# columns = bar groups = provers; can use '\n' to have long ones multilined
+columns = ["witnesscalc", "circom\nwitnesscalc", "wasmer", "w2c", "snarkjs"]
+
+[style]
+# colors = ["#e54002", "#e59202", "#0274e5", "#59aeec", "#ffff1a"]
+colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"]  
+y_ticks = [5, 10, 30, 100, 250, 1000, 3000, 5000]
+y_tickslabels = ["5s", "10ms", "30ms", "100ms", "250ms", "1s", "3s", "5s"]

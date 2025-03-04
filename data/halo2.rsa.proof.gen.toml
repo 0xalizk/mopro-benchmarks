@@ -1,0 +1,26 @@
+
+
+[metadata]
+title = "Halo2 RSA"
+x_label = "\nPlatform"
+y_label = "Time in seconds, log scale\n"
+# transpose rows x columns
+transpose = false
+log_scale = true
+
+[data]
+dataset=[
+[76.5, 11.1],
+[64.5, 9.0]]
+
+[labels]
+# rows = bars 
+rows = ["prove", "verify"]
+# columns = bar groups 
+columns = ["Native (M1 Pro)", "Emulator (M1 Pro)"]
+
+
+[style]
+colors = ["#e54002", "#59aeec"]
+y_ticks = [5, 10, 40, 80]
+y_tickslabels = ["", "10s", "40s", "80s"]
