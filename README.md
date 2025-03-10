@@ -29,8 +29,8 @@ uv run src/main.py data/[toml file]
     <td><img src="plots/circom.macos.wit.gen_by.bench.png" width="400"><br>Circom MacOS Witness Generation</td>
   </tr>
   <tr>
-    <td><img src="plots/halo2.keccak.proof.gen_by.bench.png" width="400"><br>Halo2 Keccak Proof Generation</td>
-    <td><img src="plots/halo2.rsa.proof.gen_by.bench.png" width="400"><br>Halo2 RSA Proof Generation</td>
+    <td><img src="plots/halo2.keccak.proof.gen.png" width="400"><br>Halo2 Keccak Proof Generation</td>
+    <td><img src="plots/halo2.rsa.proof.gen.png" width="400"><br>Halo2 RSA Proof Generation</td>
   </tr>
 </table>
 
