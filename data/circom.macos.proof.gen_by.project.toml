@@ -1,0 +1,29 @@
+
+
+[metadata]
+title = "Circom Proving on macOS"
+x_label = "\nBench"
+y_label = "Time, log scale\n"
+# transpose rows x columns
+transpose = false
+log_scale = true
+
+[data]
+dataset=[
+[528.0, 1161.0, 3873.0],
+[158.0, 779.0, 1462.0],
+[676.0, 3005.0, 5553.0],
+[112.0, 84.0, 877.0],
+[2421.0, 14142.0, 19794.0]]
+
+[labels]
+# columns = bar groups = projects; can use '\n' to have long ones multilined
+columns = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
+# rows = bars = benchs
+rows = ["rapidsnark", "ark-works", "snarkjs"]
+
+[style]
+# colors = ["#e54002", "#e59202", "#0274e5", "#59aeec", "#ffff1a"]
+colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"] 
+y_ticks = [15, 100, 250, 1000, 2000, 3000, 10000, 20000]
+y_tickslabels = ["", "100ms", "250ms", "1s", "", "3s", "10s", "20s"]

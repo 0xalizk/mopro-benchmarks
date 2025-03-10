@@ -1,0 +1,29 @@
+
+
+[metadata]
+title = "Circom Witness Generation on iOS"
+x_label = "\nBench"
+y_label = "Time, log scale\n"
+# transpose rows x columns
+transpose = true
+log_scale = true
+
+[data]
+dataset=[
+[142.1, 41.0, 153.0, 22.0, 285.1],
+[75.4, 51.3, 0.0, 14.6, 0.0],
+[287.7, 171.3, 2937.5, 266.5, 3284.7],
+[140.0, 93.9, 2312.3, 38.9, 1490.8],
+[147.1, 91.8, 2979.5, 77.6, 0.0]]
+
+[labels]
+# columns = bar groups = projects; can use '\n' to have long ones multilined
+columns = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
+# rows = bars = benchs
+rows = ["witnesscalc", "circom witnesscalc", "wasmer", "w2c", "snarkjs"]
+
+[style]
+#colors = ["#e54002", "#e59202", "#0274e5", "#59aeec", "#ffff1a"]
+colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"] 
+y_ticks = [15, 100, 250, 1000, 2000, 3000]
+y_tickslabels = ["15ms", "100ms", "250ms", "1s", "2s", "3s"]

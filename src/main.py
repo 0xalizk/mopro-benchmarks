@@ -116,6 +116,7 @@ def beautify_ax(config, xticks):
     ax.grid(False, axis='y', which='minor')
     ax.set_xticks(xticks)
     #ax.set_xticklabels(BENCHS, rotation=45, ha='right')  # Rotate labels 45 degrees
+    #print("\n"+str(groups)+"\n")
     ax.set_xticklabels(groups)
     ax.set_xlabel(config['metadata']['x_label'])
     ax.set_ylabel(config['metadata']['y_label']) 

@@ -1,0 +1,10 @@
+[project]
+name = "mopro-benchmarks"
+version = "0.1.0"
+description = "Plotting utility for Mopro benchmarks"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.1",
+    "toml>=0.10.2",
+]

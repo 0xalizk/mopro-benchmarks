@@ -1,0 +1,29 @@
+
+
+[metadata]
+title = "Circom Proving on Android"
+x_label = "\nBench"
+y_label = "Time, log scale\n"
+# transpose rows x columns
+transpose = false
+log_scale = true
+
+[data]
+dataset=[
+[743.70, 2330.40, 11096.40],
+[228.40, 1575.20, 3514.80],
+[950.00, 5839.00, 13442.00],
+[165.80, 276.90, 2146.00],
+[3394.50, 33239.20, 51546.30]]
+
+[labels]
+# columns = bar groups = projects; can use '\n' to have long ones multilined
+columns = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
+# rows = bars = benchs
+rows = ["rapidsnark", "ark-works", "snarkjs"]
+
+[style]
+# colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"]  # Dark Blue, Blue, Turquoise, Purple, Yellow
+colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"]
+y_ticks = [50, 100, 250, 1000, 5000, 15000, 30000, 50000]
+y_tickslabels = ["", "100 ms", "250 ms", "1s", "5s", "15s", "30s", "50s"]
