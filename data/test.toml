@@ -1,0 +1,32 @@
+
+
+[metadata]
+title = "Circom Witness Generation on Android"
+x_label = "\nWitness generator"
+y_label = "Time, log scale\n"
+# transpose rows x columns
+transpose = true
+log_scale = true # optional, default=false
+#log_base =  #optional, default=10
+
+[data]
+dataset=[
+[101.40, 71.00, 507.30, 210.50, 292.30],
+[29.00, 44.00, 271.60, 106.90, 157.90],
+[155.00, 0.00, 4723.00, 3751.00, 3958.00],
+[10.30, 14.70, 416.90, 32.80, 74.10],
+[365.10, 0.00, 5359.60, 2716.40, 3207.50]]
+
+[labels]
+# rows = bars = benchs
+rows = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
+# columns = bar groups = provers; can use '\n' to have long ones multilined
+columns = ["witnesscalc", "circom\nwitnesscalc", "wasmer", "w2c", "snarkjs"]
+
+[style]
+# colors = ["#e54002", "#e59202", "#0274e5", "#59aeec", "#ffff1a"]
+colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"] 
+#y_ticks = [5, 10, 100, 250, 1000, 2000, 3000, 6000]
+#y_ticks = [2, 16, 128, 256, 1024, 2048, 6144]
+#y_tickslabels = ["2", "16", "128", "256", "1024", "2048", "6144"]
+#y_tickslabels = ["", "10 ms", "100 ms", "250 ms", "1s", "2s", "3s", "6s"]

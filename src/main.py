@@ -3,6 +3,7 @@ import matplotlib.ticker as ticker
 import matplotlib.patches as mpatches
 from matplotlib import rcParams
 import matplotlib.font_manager as font_manager
+from matplotlib.ticker import LogLocator
 import toml, pprint, math
 
 ####################################################################################
@@ -101,17 +102,27 @@ def beautify_ax(config, xticks):
     
     ax.tick_params(labeltop=False)
 
-    if config['metadata']['log_scale']:
-        ax.set_yscale('log')
+    if 'log_scale' in config['metadata']:
+        if config['metadata']['log_scale']:
+            base = 10
+            if 'log_base' in config['metadata']:
+                base =  config['metadata']['log_base']
+        ax.set_yscale('log', base=base)
+
     ax.spines['top'].set_visible(False)
     ax.spines['left'].set_visible(True)
     ax.spines['right'].set_visible(True)
-
     ax.yaxis.set_major_formatter(ticker.ScalarFormatter())  
-    ax.yaxis.get_major_formatter().set_scientific(False)    
+    ax.yaxis.get_major_formatter().set_scientific(False) 
+    
+    if "y_ticks" in config["style"]:
+        ax.yaxis.set_major_locator(LogLocator(base=6))   
     ax.yaxis.set_minor_locator(ticker.NullLocator())  
-    ax.set_yticks(config['style']['y_ticks'])
-    ax.set_yticklabels(config['style']['y_tickslabels']) # must be after formatter setting
+    if 'y_ticks' in config['style']:
+        ax.set_yticks(config['style']['y_ticks'])
+    if 'y_tickslabels' in config['style']:
+        ax.set_yticklabels(config['style']['y_tickslabels']) # must be after formatter setting
+    
     ax.grid(True, axis='y', which='major')
     ax.grid(False, axis='y', which='minor')
     ax.set_xticks(xticks)
