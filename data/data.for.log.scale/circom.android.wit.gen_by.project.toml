@@ -2,11 +2,11 @@
 
 [metadata]
 title = "Circom Witness Generation on Android"
-x_label = "\nWitness generator"
-y_label = "Time\n"
+x_label = "\nBench"
+y_label = "Time, log scale\n"
 # transpose rows x columns
-transpose = true
-log_scale = false # optional, default=false
+transpose = false
+log_scale = true # optional, default=false
 log_base =  10 # optional, default=10. If you change it you may wanna change or comment out the y_ticks / y_tickslables below
 
 [data]
@@ -18,13 +18,13 @@ dataset=[
 [365.10, 0.00, 5359.60, 2716.40, 3207.50]]
 
 [labels]
+# columns = bar groups = projects; can use '\n' to have long ones multilined
+columns = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
 # rows = bars = benchs
-rows = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
-# columns = bar groups = provers; can use '\n' to have long ones multilined
-columns = ["witnesscalc", "circom\nwitnesscalc", "wasmer", "w2c", "snarkjs"]
+rows = ["witnesscalc", "circom witnesscalc", "wasmer", "w2c", "snarkjs"]
 
 [style]
 # colors = ["#e54002", "#e59202", "#0274e5", "#59aeec", "#ffff1a"]
 colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"] 
-y_ticks = [100, 1000, 2000, 3000, 5000]
-y_tickslabels = ["100 ms", "1s", "2s", "3s", "5s"]
+y_ticks = [5, 10, 100, 250, 1000, 2000, 3000, 6000]
+y_tickslabels = ["", "10 ms", "100 ms", "250 ms", "1s", "2s", "3s", "6s"]

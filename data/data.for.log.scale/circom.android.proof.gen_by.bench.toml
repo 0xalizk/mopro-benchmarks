@@ -1,21 +1,21 @@
 
 
 [metadata]
-title = "Circom Proving on macOS"
+title = "Circom Proving on Android"
 x_label = "\nProver"
-y_label = "Time\n"
+y_label = "Time, log scale\n"
 # transpose rows x columns
 transpose = true
-log_scale = false # optional, default=false
+log_scale = true # optional, default=false
 log_base =  10 # optional, default=10. If you change it you may wanna change or comment out the y_ticks / y_tickslables below
 
 [data]
 dataset=[
-[528.0, 1161.0, 3873.0],
-[158.0, 779.0, 1462.0],
-[676.0, 3005.0, 5553.0],
-[112.0, 84.0, 877.0],
-[2421.0, 14142.0, 19794.0]]
+[743.70, 2330.40, 11096.40],
+[228.40, 1575.20, 3514.80],
+[950.00, 5839.00, 13442.00],
+[165.80, 276.90, 2146.00],
+[3394.50, 33239.20, 51546.30]]
 
 [labels]
 # rows = bars = benchs
@@ -24,7 +24,8 @@ rows = ["Keccak256", "SHA256", "RSA", "Semaphore", "Anon Aadhaar"]
 columns = ["rapidsnark", "ark-works", "snarkjs"]
 
 [style]
-# colors = ["#e54002", "#e59202", "#0274e5", "#59aeec", "#ffff1a"]
+# colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"]  # Dark Blue, Blue, Turquoise, Purple, Yellow
 colors = ["#34495e", "#3498db", "#1abc9c", "#9b59b6", "#f1c40f"] 
-y_ticks = [1000, 3000, 10000, 20000]
-y_tickslabels = ["1s", "3s", "10s", "20s"]
+# optional:
+y_ticks = [50, 100, 250, 1000, 5000, 15000, 30000, 50000]
+y_tickslabels = ["", "100 ms", "250 ms", "1s", "5s", "15s", "30s", "50s"]

@@ -107,7 +107,7 @@ def beautify_ax(config, xticks):
             base = 10
             if 'log_base' in config['metadata']:
                 base =  config['metadata']['log_base']
-        ax.set_yscale('log', base=base)
+            ax.set_yscale('log', base=base)
 
     ax.spines['top'].set_visible(False)
     ax.spines['left'].set_visible(True)

@@ -3,10 +3,10 @@
 [metadata]
 title = "Halo2 RSA"
 x_label = "\nPlatform"
-y_label = "Time\n"
+y_label = "Time in seconds, log scale\n"
 # transpose rows x columns
 transpose = false
-log_scale = false # optional, default=false
+log_scale = true # optional, default=false
 log_base =  10 # optional, default=10. If you change it you may wanna change or comment out the y_ticks / y_tickslables below
 
 [data]
